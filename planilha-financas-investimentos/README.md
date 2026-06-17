@@ -1,34 +1,45 @@
 # 💰 Planilha de Finanças & Investimentos (PT-BR)
 
-Planilha Excel completa para uso real no dia a dia, com 5 ferramentas integradas
-que se atualizam automaticamente a partir dos seus lançamentos.
+Planilha Excel completa e **validada** para uso real no dia a dia. Reúne
+controle financeiro, orçamento, carteira de investimentos, patrimônio,
+simulador de juros compostos, independência financeira (FIRE) e metas — tudo
+integrado e atualizado automaticamente a partir dos seus lançamentos.
 
 **Arquivo:** `Planilha_Financas_e_Investimentos.xlsx`
 
-## Abas
+## Abas (11)
 
 | Aba | O que faz |
 |---|---|
-| 📊 **Dashboard** | Painel com 8 indicadores (receitas, despesas, taxa de poupança, carteira, progresso FIRE…) e gráficos de receitas × despesas e despesas por categoria. Tudo automático. |
-| 💰 **Lancamentos** | Controle financeiro: registre cada entrada e saída com menus suspensos de Tipo, Categoria e Forma de Pagamento. Cores automáticas por tipo. Vem com 6 meses de dados de exemplo. |
-| 📅 **Orcamento** | Orçamento doméstico planejado × realizado, mês a mês, por categoria. Destaca em vermelho quando o orçamento estoura e calcula saldo mensal e taxa de poupança. |
-| 📈 **Carteira** | Carteira de ações, FIIs e ETFs: preço médio, resultado em R$ e %, participação de cada ativo, dividendos, yield sobre custo e gráfico de composição. |
-| 🧮 **Simulador** | Simulador de juros compostos com 3 cenários de rentabilidade editáveis (conservador, moderado, arrojado), projeção de 30 anos e gráfico comparativo. |
-| 🔥 **Independencia** | Calculadora FIRE: número da independência financeira, anos até alcançá-la, idade na independência, marcos de 25/50/75/100% e gráfico da trajetória. |
-| 📖 **Instrucoes** | Guia de uso passo a passo dentro da própria planilha. |
-| ⚙️ **Config** | Listas de categorias, tipos e formas de pagamento (personalize aqui os menus suspensos). |
+| 🏠 **Início** | Capa com menu de navegação e a regra de ouro de uso. |
+| 📊 **Dashboard** | 12 indicadores em cartões + 4 gráficos (receitas × despesas × investimentos por mês, despesas por categoria, evolução do patrimônio e taxa de poupança). Tudo automático. |
+| 💰 **Lancamentos** | Controle financeiro com menus suspensos, cores automáticas por tipo, coluna de **Saldo em Caixa** acumulado e 6 meses de dados de exemplo. |
+| 📅 **Orcamento** | Orçamento doméstico planejado × realizado por categoria e mês, com alerta de estouro, % do orçamento anual usado (barra de dados), saldo mensal e taxa de poupança. |
+| 📈 **Carteira** | Ações, FIIs e ETFs com resultado em R$ e %, **alocação-alvo e rebalanceamento** (quanto comprar/vender), yield sobre custo, **retorno total com dividendos**, resumo por classe e 3 gráficos. |
+| 🏦 **Patrimonio** | Patrimônio líquido mês a mês (puxa o total da Carteira), variação, **reserva de emergência** com meta e %, e gráficos de evolução e composição. |
+| 🧮 **Simulador** | Juros compostos com 3 cenários editáveis, ajuste por **inflação** (valor de hoje), renda mensal estimada, regra dos 72, e gráficos de linha e área empilhada (aportado × juros). |
+| 🔥 **Independencia** | Calculadora FIRE: número da independência, anos e idade até alcançá-la, **Lean / Fat / Coast FIRE**, marcos de 25/50/75/100% e gráfico da trajetória. |
+| 🎯 **Metas** | Objetivos com valor alvo, prazo, % concluído e **aporte mensal necessário** para chegar no prazo, com status e barra de progresso. |
+| 📖 **Instrucoes** | Guia de uso passo a passo. |
+| ⚙️ **Config** | Listas de categorias, tipos, formas de pagamento e classes (personalize os menus suspensos aqui). |
 
 ## Como usar
 
-1. Abra o arquivo no Excel (ou Google Sheets / LibreOffice Calc).
-2. Leia a aba **Instrucoes**.
-3. Edite **apenas as células amarelas** e a aba **Lancamentos** — todo o resto
-   é calculado por fórmulas.
-4. Apague os dados de exemplo (jan–jun/2026) e comece a registrar os seus.
+1. Abra no Excel, Google Sheets ou LibreOffice Calc.
+2. Comece pela aba **Início** e leia as **Instruções**.
+3. Edite **apenas as células amarelas** e a aba **Lançamentos** — todo o resto
+   é fórmula e se calcula sozinho.
+4. Apague os dados de exemplo (jan–jun/2026) e registre os seus.
 
-## Detalhes técnicos
+## Confiabilidade — como esta planilha foi validada
 
-- Gerada com Python + openpyxl; fórmulas nativas do Excel (`SUMIFS`, `FV`,
-  `NPER`, `INDEX`/`MATCH`), validação de dados, formatação condicional,
-  barras de dados e 5 gráficos nativos.
-- Sem macros (VBA) — funciona em qualquer Excel moderno e no Google Sheets.
+- **2.024 fórmulas**, todas com sintaxe verificada e proteção contra erros
+  (`IFERROR`).
+- Cada cálculo foi **recalculado por um motor independente** e comparado com
+  matemática feita à parte em Python (incl. `numpy-financial` para `FV`/`NPER`):
+  **45 verificações, 0 falhas, 0 células de erro** (`#REF!`, `#DIV/0!`, etc.).
+- **Referências limitadas** (sem colunas inteiras) para a planilha permanecer
+  rápida e estável mesmo com muitos lançamentos.
+- 13 gráficos nativos, 17 regras de formatação condicional e 4 menus suspensos.
+- **Sem macros (VBA)** — funciona em qualquer Excel moderno, Google Sheets e
+  LibreOffice.
