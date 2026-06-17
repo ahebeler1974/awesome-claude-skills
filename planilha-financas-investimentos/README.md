@@ -26,10 +26,28 @@ integrado e atualizado automaticamente a partir dos seus lançamentos.
 ## Como usar
 
 1. Abra no Excel, Google Sheets ou LibreOffice Calc.
-2. Comece pela aba **Início** e leia as **Instruções**.
-3. Edite **apenas as células amarelas** e a aba **Lançamentos** — todo o resto
-   é fórmula e se calcula sozinho.
+2. Comece pela aba **Início**: ela traz um resumo ao vivo e **links clicáveis**
+   para todas as abas.
+3. Edite **apenas as células amarelas** (🟡 = você preenche) e a aba
+   **Lançamentos**. As células cinza (⬜) são cálculo automático.
 4. Apague os dados de exemplo (jan–jun/2026) e registre os seus.
+
+## Novidades desta versão (foco em usabilidade profissional)
+
+- **Aba Início interativa**: 8 indicadores ao vivo (patrimônio, receitas,
+  despesas, poupança, carteira, FIRE, saldo, reserva) + **menu de navegação
+  clicável** para cada aba, e legenda de cores.
+- **Botão “🏠 Início”** em todas as abas para voltar ao menu com um clique.
+- **Padrão de cores consistente**: 🟡 amarelo = entrada do usuário,
+  ⬜ cinza = fórmula automática — em todas as abas.
+- **Painel de Insights automáticos** no Dashboard: maior categoria de despesa,
+  mês de maior gasto, médias de receitas/despesas/aportes, sobra média,
+  dividendos médios e anos até a independência (`INDEX/MATCH`, `AVERAGEIF`,
+  `COUNTIF`).
+- **Filtro/ordenação** (AutoFiltro) na aba Lançamentos.
+- **Abas de exibição protegidas** (Dashboard e Instruções, sem senha) para
+  evitar apagar fórmulas por engano — basta *Revisão → Desproteger* para
+  liberar.
 
 ## Confiabilidade — como esta planilha foi validada
 
